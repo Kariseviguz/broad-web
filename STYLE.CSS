@@ -1,0 +1,246 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5em;
+}
+
+#site_wrap {
+
+    background-color: white;
+    height: 100vh;
+    display: grid;
+    grid-template-columns:
+        1fr repeat(4, minmax(0,272px)) 1fr;
+    grid-gap: 5px;
+    grid-template-rows: 142px 294px ,373,  min-content 1fr;
+    grid-template-areas:
+        ". header header header header ."  
+        "main main main main main main" 
+        ". featured_header featured_header featured_header featured_profile ."
+        
+        ". content  content content content. "
+        "footer footer footer footer footer footer";
+}
+
+
+.header {
+
+   /* min-height: 100vh;
+    background: linear-gradient(rgba(rgb(24, 23, 23), rgb(15, 15, 15), rgb(8, 8, 8), alpha)), url(Images1/Library.jpeg)center/cover none;
+    color: white*/
+
+    background-color: #749EB2;
+    grid-area: header;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .LOGO{
+      width: 85px;
+
+}
+.header .nav{
+     list-style: none;
+     padding: 0;
+     display: flex;
+}
+.header .nav a{
+       text-decoration: none;
+       border: 2px solid #FD6D96;
+       border-radius: 50em;
+       color:#FD6D96;
+       padding: 15px 30;
+       margin: 0 8px;
+       text-transform: uppercase;
+       font-weight: bold;
+
+}
+.header .nav a:hover, .header .nav .active{ 
+        background-color: #471120;
+        color: white;
+}
+
+.main {
+
+    background-image: url('Images1/landscape.png');
+    grid-area: main;
+    background-size: cover;
+    padding-top: 7em;
+    
+}
+
+.featured_header {
+
+    background-color: white;
+    grid-area: featured_header;
+}
+.featured_header h1{
+
+    color: burlywood;
+}
+.featured_header p{
+
+    color: darkgrey;
+}
+.btn{
+    text-decoration: none;
+    background-color: #471120;
+    border: 2px solid #471120;
+    border-radius: 50em;
+    color:white;
+    padding: 15px 30;
+    margin: 0 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+
+}
+
+
+
+.featured_profile {
+
+    padding: 2em 1em;
+   
+    grid-area: featured_profile;
+}
+.type1{
+    width: 30%;
+    display: block;
+    margin: 0% auto;
+}
+
+.content {
+
+    background-color: white;
+    grid-area: content;
+    display: flex;
+    margin-top: 50px;
+    display:flex
+   
+}
+.content .font2{
+    color: darkcyan;
+
+    position: absolute;
+    font-size: 3rem;
+    
+
+}
+.box1{
+
+    width: 800px;
+    height: 400px;
+
+}
+.content img {
+    margin:0 3px 2em 4px;
+}
+
+.footer {
+
+    background-color:#333;
+    color: gray;
+    text-align: center;
+    padding-top: 3em;
+    grid-area: footer;
+}
+
+@media screen and (max-width:480px) {
+    #site_wrap {
+        background-color: purple;
+
+        grid-template-areas:
+            "header header header header header header"
+            "main main main main main main "
+            "featured_header featured_header featured_header featured_header featured_header feature_profile"
+            
+            "content content content content content content"
+            "footer footer footer footer footer footer";
+
+
+    }
+
+    .featured_profile {
+        display: none;
+    }
+}
+
+
+
+/* Blog page styless */
+.blog-info {
+             
+    color: #f5f5dc;
+             font-family: Arial, Helvetica, sans-serif;
+             font-size: 200%;
+            }
+
+.blog-big {
+
+           color: #f5f5dc;
+           font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+           font-size: 350%;
+}
+.picture1 
+{
+    width: 200px;
+    height:300px;
+}
+.img-resize {
+    width: 350px;
+    height:350px;
+    object-fit: cover;
+    object-position: center center ;
+
+}
+.blog-big2 {
+
+    color: #749EB2;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    font-size: 350%;
+}
+.blog-info2 {
+             
+    color: #F9C7E4
+    ;
+             font-family: Arial, Helvetica, sans-serif;
+             font-size: 100%;
+            }
+
+/* Blog2 page styless */
+
+.img-resize-blog{
+
+       max-width: 320px;
+       float: left;
+
+
+}
+.img-resize-blog2 {
+
+    max-width: 320px;
+    float: right;
+
+
+}
+.wrapper{
+           margin: 150px auto;
+           width: 70%;
+
+
+}
+.text-box {       
+            color: gray;
+       
+}
+.text-box h2 {
+font-size: 42px;
+
+
+}
+.text-box p {
+              font-size: 16px;
+}
